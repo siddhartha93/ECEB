@@ -1,0 +1,24 @@
+<ion-view title="ECEB - Individual login" id="page4">
+  <script type="text/javascript">
+    function checkLogin() {
+      email = document.getElementById("email").value;
+      pass = document.getElementById("pass").value;
+      alert(email+pass);
+    }
+  </script>
+  <ion-content padding="true" class="has-header">
+    <form id="eCEBIndividualLogin-form1" class="list">
+      <ion-list id="eCEBIndividualLogin-list1">
+        <label class="item item-input" id="eCEBIndividualLogin-input1">
+          <span class="input-label">Email</span>
+          <input type="email" id='email' placeholder="">
+        </label>
+        <label class="item item-input" id="eCEBIndividualLogin-input2">
+          <span class="input-label">Password</span>
+          <input type="password" id='pass' placeholder="">
+        </label>
+      </ion-list>
+      <a ui-sref="eCEBListOfBabies()" onclick="checkLogin()" id="eCEBIndividualLogin-button5" class="button button-stable button-block">Log in</a>
+    </form>
+  </ion-content>
+</ion-view>
