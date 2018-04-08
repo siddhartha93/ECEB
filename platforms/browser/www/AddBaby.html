@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>AddBaby</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <!-- Path to Framework7 Library CSS-->
+        <link rel="stylesheet" href="css/framework7.material.min.css">
+        <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+        <!-- Path to your custom app styles-->
+        <link rel="stylesheet" href="css/my-app.css">
+        <!--<script >-->
+            <!--function logout() {-->
+              <!--var req = new XMLHttpRequest();-->
+              <!--req.open("POST", "https://play.dhis2.org/dev", true);-->
+              <!--req.withCredentials = true;-->
+              <!--req.send();-->
+
+              <!--document.getElementById('log_form').style.display = '';-->
+              <!--document.getElementById('logged_user').style.display = 'none';-->
+              <!--document.getElementById('logout_button').style.display = 'none';-->
+              <!--document.getElementById('content').style.display = 'none';-->
+              <!--hide_error();-->
+              <!--location.href="index.html"-->
+            <!--}-->
+        <!--</script>-->
+    </head>
+    <div class="views">
+        <div class="view view-main">
+            <div class="pages navbar-fixed toolbar-fixed">
+                <div class="page" data-page = "indivlogin">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="title" style="margin: 0 auto;">ECEB - Login</div>
+                        </div>
+                    </div>
+                    <div class="page-content">
+                        <div class="block">
+                            <div>
+                                <span class="input-label">Bed no.</span><textarea placeholder=""></textarea>
+                                <span class="input-label">Mother name</span><textarea placeholder=""></textarea>
+                                <span class="input-label">Child no.</span><textarea placeholder=""></textarea>
+                                <span class="input-label">Birth time</span><textarea placeholder=""></textarea>
+                            <div>
+                                <a class="button button-fill" id="AddBaby-Submit">Log In</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    </body>
+    <!--<body>-->
+        <!--<form id="eCEBAddBabyDetails" class="list">-->
+            <!---->
+            <!--<label class="item item-input" id="eCEBAddBabyDetails-textarea1">-->
+                <!--<span class="input-label">Bed no.</span><textarea placeholder=""></textarea></label><br>-->
+            <!--<label class="item item-input" id="eCEBAddBabyDetails-textarea2">-->
+              <!--<span class="input-label">Mother name</span><textarea placeholder=""></textarea></label><br>-->
+            <!--<label class="item item-input" id="eCEBAddBabyDetails-textarea3">-->
+              <!--<span class="input-label">Child no.</span><textarea placeholder=""></textarea></label><br>-->
+            <!--<label class="item item-input" id="eCEBAddBabyDetails-textarea4">-->
+              <!--<span class="input-label">Birth time</span><textarea placeholder=""></textarea></label><br>-->
+              <!---->
+            <!--<button id="Addbabysubmit" onClick="Addbaby()">Add Baby</button> -->
+            <!--<button id="logout"  onclick="logout()">Logout</button>-->
+            <!--&lt;!&ndash; <a id="logout" href="index.html">Logout</a>-->
+            <!--<script type="text/javascript" src="js/logout.js"></script>-->
+             <!--&ndash;&gt;-->
+        <!--</form>-->
+    <!--</body>-->
+</html>
