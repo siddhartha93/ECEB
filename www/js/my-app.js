@@ -13,6 +13,19 @@ var mainView = myApp.addView('.view-main', {
     domCahce: true,
 });
 
+
+// myApp.confirm(text, [title, callbackOk, callbackCancel])
+//     $$('.confirm-title-ok-cancel').on('click', function () {
+//         myApp.confirm('Are you sure?', 'Custom Title',
+//             function () {
+//                 myApp.alert('You clicked Ok button');
+//             },
+//             function () {
+//                 myApp.alert('You clicked Cancel button');
+//             }
+//         );
+//     });
+
 // Callbacks to run specific code for specific pages, for example for IndividualLogin page:
 myApp.onPageInit('indivlogin', function (page) {
     // run createContentPage func after link was clicked
@@ -51,17 +64,17 @@ function login(){
     // });
 
     $$.ajax({
-        url: 'https://play.dhis2.org/2.27/api/me',
         method: 'GET',
-        xhrFields: {
-            withCredentials: true
-        },
-        cache: false,
-        dataType: 'json',
-        beforeSend: function (xhr) {
-            alert('hi');
-            xhr.setRequestHeader('Authorization', 'Basic ' + btoa(id+":"+pass));
-        },
+            xhrFields: {
+                withCredentials: true
+            },
+            cache: false,
+            dataType: 'json',
+            beforeSend: function (xhr) {
+                alert('hi');
+                xhr.setRequestHeader('Authorization', 'Basic ' + btoa(id+":"+pass));
+            },
+            url: 'https://play.dhis2.org/2.27/api/me',
 
         success: function (data, status, xhr) {
             alert("Login Sucessful");

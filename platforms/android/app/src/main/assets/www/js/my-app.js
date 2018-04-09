@@ -51,17 +51,17 @@ function login(){
     // });
 
     $$.ajax({
-        url: 'https://play.dhis2.org/2.27/api/me',
         method: 'GET',
-        xhrFields: {
-            withCredentials: true
-        },
-        cache: false,
-        dataType: 'json',
-        beforeSend: function (xhr) {
-            alert('hi');
-            xhr.setRequestHeader('Authorization', 'Basic ' + btoa(id+":"+pass));
-        },
+            xhrFields: {
+                withCredentials: true
+            },
+            cache: false,
+            dataType: 'json',
+            beforeSend: function (xhr) {
+                alert('hi');
+                xhr.setRequestHeader('Authorization', 'Basic ' + btoa(id+":"+pass));
+            },
+            url: 'https://play.dhis2.org/2.27/api/me',
 
         success: function (data, status, xhr) {
             alert("Login Sucessful");
