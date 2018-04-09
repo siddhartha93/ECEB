@@ -89,9 +89,18 @@ function generateBaby() {
     var gen = document.getElementById("Gender").value;
     var mothname = document.getElementById("Mother Name").value;
     var bday = document.getElementById("Birth Date time").value;
-    alert(child+','+bed+','+gen+','+mothname+','+bday);
+    alert(child+':'+bed+','+gen+','+mothname+','+bday);
 }
 
+// //confirm function
+// myApp.confirm(text, [title, callbackOk, callbackCancel]) {
+//     $$('.confirm-title-ok').on('click', function () {
+//         myApp.confirm('Are you sure?', 'Custom Title', function () {
+//             myApp.alert('You clicked Ok button');
+//         });
+//     });
+//
+// }
 
 // Callbacks to run specific code for specific pages, for example for About page:
 myApp.onPageInit('about', function (page) {
