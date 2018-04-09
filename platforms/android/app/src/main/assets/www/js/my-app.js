@@ -1,6 +1,6 @@
 // Initialize your app
 var myApp = new Framework7({
-    modalTitle: 'My App',
+    modalTitle: 'ECEB',
     pushState: true,
     material: true,
 });
@@ -11,6 +11,102 @@ var $$ = Dom7;
 // Add view
 var mainView = myApp.addView('.view-main', {
     domCahce: true,
+});
+
+
+//Modals/Alert/Confirm
+$$('.confirm-ok-cancel').on('click', function () {
+    myApp.confirm('Are you sure?',
+        function () {
+            myApp.alert('You clicked Ok button');
+            location.href="Baby 1.html"
+        },
+        function () {
+            myApp.alert('You clicked Cancel button');
+        }
+    );
+});
+
+$$('.confirm-title-ok-cancel').on('click', function () {
+    myApp.confirm('Are you sure?', 'Custom Title',
+        function () {
+            myApp.alert('You clicked Ok button');
+        },
+        function () {
+            myApp.alert('You clicked Cancel button');
+        }
+    );
+});
+
+//Model/Action sheet
+//- With callbacks on click
+$$('#BabyPhase2-Button').on('click', function () {
+    var buttons1 = [
+        {
+            text: 'Normal',
+            bg: 'green',
+            onClick: function () {
+                myApp.alert('Normal clicked');
+                location.href="Normalcondition.html"
+            }
+        },
+    ];
+    var buttons2 = [
+        {
+            text: 'Problem',
+            label: true,
+            bg: 'yellow'
+        },
+        {
+            text: 'Abnormal temperature',
+            onClick: function () {
+                myApp.alert('Abnormal temperature clicked');
+                location.href="ProblemAbnTemp.html"
+            }
+        },
+        {
+            text: 'Under 2000g',
+            onClick: function () {
+                myApp.alert('Under 2000g clicked');
+            }
+        },
+        {
+            text: 'Poor feeding',
+            onClick: function () {
+                myApp.alert('Poor feeding clicked');
+            }
+        }
+    ];
+    var buttons3 = [
+        {
+            text: 'Danger Sign',
+            bg: 'red',
+            label: true
+        },
+        {
+            text: 'Fast breathing, chest indrawing etc.',
+            onClick: function () {
+                myApp.alert('Danger sign clicked');
+            }
+        },
+        {
+            text: '<1500g or Severe Jaundice',
+            onClick: function () {
+                myApp.alert('<1500g or Severe Jaundice clicked');
+            }
+        },
+    ];
+    var buttons4 = [
+        {
+            text: 'Cancel',
+            color: 'red',
+            onClick: function () {
+                myApp.alert('Cancel clicked');
+            }
+        },
+    ];
+    var groups = [buttons1, buttons2, buttons3, buttons4];
+    myApp.actions(groups);
 });
 
 // Callbacks to run specific code for specific pages, for example for IndividualLogin page:

@@ -38,6 +38,80 @@ $$('.confirm-title-ok-cancel').on('click', function () {
     );
 });
 
+//Model/Action sheet
+//- With callbacks on click
+$$('#BabyPhase2-Button').on('click', function () {
+    var buttons1 = [
+        {
+            text: 'Normal',
+            bg: 'green',
+            onClick: function () {
+                myApp.alert('Normal clicked');
+                location.href="Normalcondition.html"
+            }
+        },
+    ];
+    var buttons2 = [
+        {
+            text: 'Problem',
+            label: true,
+            bg: 'yellow'
+        },
+        {
+            text: 'Abnormal temperature',
+            onClick: function () {
+                myApp.alert('Abnormal temperature clicked');
+                location.href="ProblemAbnTemp.html"
+            }
+        },
+        {
+            text: 'Under 2000g',
+            onClick: function () {
+                myApp.alert('Under 2000g clicked');
+                location.href="ProblemUnderWt.html"
+            }
+        },
+        {
+            text: 'Poor feeding',
+            onClick: function () {
+                myApp.alert('Poor feeding clicked');
+                location.href="ProblemPoorFeeding.html"
+            }
+        }
+    ];
+    var buttons3 = [
+        {
+            text: 'Danger Sign',
+            bg: 'red',
+            label: true
+        },
+        {
+            text: 'Fast breathing, chest indrawing etc.',
+            onClick: function () {
+                myApp.alert('Danger sign clicked');
+                location.href="DangerSign.html"
+            }
+        },
+        {
+            text: '<1500g or Severe Jaundice',
+            onClick: function () {
+                myApp.alert('<1500g or Severe Jaundice clicked');
+            }
+        },
+    ];
+    var buttons4 = [
+        {
+            text: 'Cancel',
+            color: 'red',
+            onClick: function () {
+                myApp.alert('Cancel clicked');
+            }
+        },
+    ];
+    var groups = [buttons1, buttons2, buttons3, buttons4];
+    myApp.actions(groups);
+});
+
 // Callbacks to run specific code for specific pages, for example for IndividualLogin page:
 myApp.onPageInit('indivlogin', function (page) {
     // run createContentPage func after link was clicked
