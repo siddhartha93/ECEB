@@ -36,11 +36,12 @@
                     <div class="list-block media-list">
                         <ul>
                             <li>
-                                <a href="#" class="item-link item-content">
+                                <a href="Baby 1.html" class="item-link item-content">
                                     <div class="item-inner">
                                         <div class="item-title-row">
                                             <div class="item-title">Baby </div>
-                                            <div class="item-after">17:14</div>
+                                            <div class="item-after" id="write"></div>
+
                                         </div>
                                         <!--<div class="item-subtitle">New messages from John Doe</div>-->
                                         <div class="item-text">Lorem ipsum dolor sit amet...</div>
@@ -60,8 +61,11 @@
 <script type="text/javascript" src="js/my-app.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript">
-    app.initialize();
+<script>
+    function myFunction() {
+        var x = document.getElementById("Birth Date time").value;
+        document.getElementById("write").innerHTML = x;
+    }
 </script>
 </body>
 </html>

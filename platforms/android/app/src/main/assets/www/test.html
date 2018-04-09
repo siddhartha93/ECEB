@@ -20,51 +20,35 @@
 
 </head>
 <body>
-<div class="views">
-    <div class="view view-main">
-        <div class="pages navbar-fixed toolbar-fixed">
-            <div class="page" data-page = "babieslist">
-                <div class="navbar">
-                    <div class="navbar-inner">
-                        <div class="title" style="margin: 0 auto;">ECEB</div>
-                    </div>
-                </div>
-                <div class="page-content">
-                    <div>
-                        <a class="button button-fill" id="AddBabyButton" href="AddBaby.html">Add Baby</a>
-                    </div>
-                    <!--Media List View-->
-
-                    <div class="content-block-title">Mail App</div>
-                    <div class="list-block media-list">
-                        <ul>
-                            <li>
-                                <a href="#" class="item-link item-content">
-                                    <div class="item-inner">
-                                        <div class="item-title-row">
-                                            <div class="item-title">Baby </div>
-                                            <div class="item-after">17:14</div>
-                                        </div>
-                                        <!--<div class="item-subtitle">New messages from John Doe</div>-->
-                                        <div class="item-text">Lorem ipsum dolor sit amet...</div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+<div class="list-block">
+    <ul>
+        <li class="item-content">
+            <div class="item-inner">
+                <div class="item-title">Element 1</div>
+            </div>
+        </li>
+        <!-- This element will be disabled -->
+        <li class="item-content disabled">
+            <div class="item-inner">
+                <div class="item-title">Element 2</div>
+            </div>
+        </li>
+        <li class="item-content">
+            <div class="item-inner">
+                <div class="item-title">Element 3</div>
+            </div>
+        </li>
+        <!-- Element with disabled input -->
+        <li class="item-content">
+            <div class="item-inner">
+                <div class="item-title label">Your name</div>
+                <div class="item-input">
+                    <!-- Disabled input -->
+                    <input type="text" name="name" disabled>
                 </div>
             </div>
-        </div>
-    </div>
+        </li>
+    </ul>
 </div>
-<!-- Path to Framework7 Library JS-->
-<script type="text/javascript" src="js/framework7.min.js"></script>
-<!-- Path to your app js-->
-<script type="text/javascript" src="js/my-app.js"></script>
-<script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript">
-    app.initialize();
-    </scrip
 </body>
 </html>

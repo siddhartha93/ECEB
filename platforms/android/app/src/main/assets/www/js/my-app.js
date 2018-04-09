@@ -13,7 +13,7 @@ var mainView = myApp.addView('.view-main', {
     domCahce: true,
 });
 
-// Callbacks to run specific code for specific pages, for example for About page:
+// Callbacks to run specific code for specific pages, for example for IndividualLogin page:
 myApp.onPageInit('indivlogin', function (page) {
     // run createContentPage func after link was clicked
     $$('#indiv-Submit').on('click', function () {
@@ -73,10 +73,6 @@ function login(){
         }
     });
 
-    $$(document).on('ajax:complete', function (e) {
-        var xhr = e.detail.xhr;
-        console.log('request performed');
-    });
 }
 
 // Callbacks to run specific code for specific pages, for example for About page:
