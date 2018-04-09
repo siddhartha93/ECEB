@@ -19,6 +19,7 @@ $$('.confirm-ok-cancel').on('click', function () {
     myApp.confirm('Are you sure?',
         function () {
             myApp.alert('You clicked Ok button');
+            location.href="Baby 1.html"
         },
         function () {
             myApp.alert('You clicked Cancel button');

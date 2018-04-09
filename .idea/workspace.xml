@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96a95c2c-f360-4ce2-a24a-1fbe32ddb4f8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/www/BPhase1.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/BPhase1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/BPhase2.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/BPhase2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/BabiesList.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/BabiesList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/js/my-app.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/my-app.js" afterDir="false" />
     </list>
@@ -52,8 +50,8 @@
       <file leaf-file-name="my-app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/my-app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="285">
+              <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -82,8 +80,8 @@
       <file leaf-file-name="BabiesList.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/BabiesList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+            <state relative-caret-position="44">
+              <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -275,12 +273,12 @@
       <workItem from="1523132882906" duration="3983000" />
       <workItem from="1523171627516" duration="868000" />
       <workItem from="1523203598885" duration="8076000" />
-      <workItem from="1523247685828" duration="5684000" />
+      <workItem from="1523247685828" duration="6592000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41866000" />
+    <option name="totallyTimeSpent" value="42774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -683,13 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/BPhase1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="31" column="84" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/BPhase2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -700,17 +691,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/BPhase1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="31" column="84" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/BabiesList.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        <state relative-caret-position="44">
+          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/my-app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="285">
+          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
         </state>
       </provider>
     </entry>
