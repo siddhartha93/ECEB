@@ -1,6 +1,6 @@
 // Initialize your app
 var myApp = new Framework7({
-    modalTitle: 'My App',
+    modalTitle: 'ECEB',
     pushState: true,
     material: true,
 });
@@ -14,17 +14,28 @@ var mainView = myApp.addView('.view-main', {
 });
 
 
-// myApp.confirm(text, [title, callbackOk, callbackCancel])
-//     $$('.confirm-title-ok-cancel').on('click', function () {
-//         myApp.confirm('Are you sure?', 'Custom Title',
-//             function () {
-//                 myApp.alert('You clicked Ok button');
-//             },
-//             function () {
-//                 myApp.alert('You clicked Cancel button');
-//             }
-//         );
-//     });
+//Modals/Alert/Confirm
+$$('.confirm-ok-cancel').on('click', function () {
+    myApp.confirm('Are you sure?',
+        function () {
+            myApp.alert('You clicked Ok button');
+        },
+        function () {
+            myApp.alert('You clicked Cancel button');
+        }
+    );
+});
+
+$$('.confirm-title-ok-cancel').on('click', function () {
+    myApp.confirm('Are you sure?', 'Custom Title',
+        function () {
+            myApp.alert('You clicked Ok button');
+        },
+        function () {
+            myApp.alert('You clicked Cancel button');
+        }
+    );
+});
 
 // Callbacks to run specific code for specific pages, for example for IndividualLogin page:
 myApp.onPageInit('indivlogin', function (page) {
