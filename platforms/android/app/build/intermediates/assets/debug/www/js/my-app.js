@@ -15,16 +15,18 @@ var mainView = myApp.addView('.view-main', {
 
 
 //Modals/Alert/Confirm
-$$('.confirm-ok-cancel').on('click', function () {
-    myApp.confirm('Are you sure?',
-        function () {
-            myApp.alert('You clicked Ok button');
-            location.href="Baby 1.html"
-        },
-        function () {
-            myApp.alert('You clicked Cancel button');
-        }
-    );
+myApp.onPageInit('babieslist', function (page) {
+    $$('.confirm-ok-cancel').on('click', function () {
+        myApp.confirm('Are you sure?',
+            function () {
+                myApp.alert('You clicked Ok button');
+                window.location.href="Baby1.html"
+            },
+            function () {
+                myApp.alert('You clicked Cancel button');
+            }
+        );
+    });
 });
 
 $$('.confirm-title-ok-cancel').on('click', function () {
@@ -40,14 +42,20 @@ $$('.confirm-title-ok-cancel').on('click', function () {
 
 //Model/Action sheet
 //- With callbacks on click
-$$('#BabyPhase2-Button').on('click', function () {
+myApp.onPageInit('babyphase2', function (page) {
+    $$('#BabyPhase2Button').on('click', function () {
+        showalert();
+    });
+});
+
+function showalert() {
     var buttons1 = [
         {
             text: 'Normal',
             bg: 'green',
             onClick: function () {
                 myApp.alert('Normal clicked');
-                location.href="Normalcondition.html"
+                location.href = "Normalcondition.html"
             }
         },
     ];
@@ -61,19 +69,21 @@ $$('#BabyPhase2-Button').on('click', function () {
             text: 'Abnormal temperature',
             onClick: function () {
                 myApp.alert('Abnormal temperature clicked');
-                location.href="ProblemAbnTemp.html"
+                location.href = "ProblemAbnTemp.html"
             }
         },
         {
             text: 'Under 2000g',
             onClick: function () {
                 myApp.alert('Under 2000g clicked');
+                location.href = "ProblemUnderWt.html"
             }
         },
         {
             text: 'Poor feeding',
             onClick: function () {
                 myApp.alert('Poor feeding clicked');
+                location.href = "ProblemPoorFeeding.html"
             }
         }
     ];
@@ -87,6 +97,7 @@ $$('#BabyPhase2-Button').on('click', function () {
             text: 'Fast breathing, chest indrawing etc.',
             onClick: function () {
                 myApp.alert('Danger sign clicked');
+                location.href = "DangerSign.html"
             }
         },
         {
@@ -107,7 +118,7 @@ $$('#BabyPhase2-Button').on('click', function () {
     ];
     var groups = [buttons1, buttons2, buttons3, buttons4];
     myApp.actions(groups);
-});
+}
 
 // Callbacks to run specific code for specific pages, for example for IndividualLogin page:
 myApp.onPageInit('indivlogin', function (page) {
@@ -117,56 +128,36 @@ myApp.onPageInit('indivlogin', function (page) {
     });
 });
 
-
 function login(){
     var id = document.getElementById("user").value;
     var pass = document.getElementById("pass").value;
     alert(id+pass);
 
-    // app.request.get({
-    //     url: 'https://play.dhis2.org/2.27/api/me',
-    //     method: 'GET',
-    //     xhrFields: {
-    //         withCredentials: true
-    //     },
-    //     cache: false,
-    //     dataType: 'json',
-    //     beforeSend: function (xhr) {
-    //         alert('hi');
-    //         xhr.setRequestHeader('Authorization', 'Basic ' + btoa(id+":"+pass));
-    //     },
-    //
-    //     success: function (data, status, xhr) {
-    //         alert("Login Sucessful");
-    //         location.href = "AddBaby.html";
-    //     },
-    //     error: function (xhr, status) {
-    //         console.log("error: " + xhr.status);
-    //         alert("Login Failed");
-    //     }
-    // });
-
     $$.ajax({
-        method: 'GET',
-            xhrFields: {
-                withCredentials: true
-            },
-            cache: false,
-            dataType: 'json',
-            beforeSend: function (xhr) {
-                alert('hi');
-                xhr.setRequestHeader('Authorization', 'Basic ' + btoa(id+":"+pass));
-            },
-            url: 'https://play.dhis2.org/2.27/api/me',
+        type: 'GET',
+        xhrFields: {
+            withCredentials: true
+        },
+        cache: false,
+        dataType: 'json',
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', 'Basic ' + btoa(id+":"+pass));
+        },
+        url: 'https://play.dhis2.org/2.27/api/27/me',
 
-        success: function (data, status, xhr) {
+        success: function (response) {
+            console.log(response);
+            window.localStorage.setItem("UserProfile",JSON.stringify(response));
             alert("Login Sucessful");
-            href = "BabiesList.html";
+            location.href="BabiesList.html";
+            //alert(JSON.parse(response[3]));
+
         },
         error: function (xhr, status) {
-            console.log("error: " + xhr.status);
+            console.log("error: " + status);
             alert("Login Failed");
         }
+
     });
 
 }
