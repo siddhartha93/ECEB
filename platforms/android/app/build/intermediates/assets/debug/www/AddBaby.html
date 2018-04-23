@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
         <meta name="apple-mobile-web-app-capable" content="yes">
 
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+<!--        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -17,6 +17,7 @@
         <!-- Path to your custom app styles-->
         <link rel="stylesheet" href="css/my-app.css">
     </head>
+    <body>
     <div class="views">
         <div class="view view-main">
             <div class="pages navbar-fixed toolbar-fixed">
@@ -46,7 +47,7 @@
                                             <div class="item-inner">
                                                 <div class="item-title label">Child No.</div>
                                                 <div class="item-input">
-                                                    <input type="text" placeholder="Child Number" id='Child No.'>
+                                                    <input type="text" placeholder="Child Number" id="childNo">
                                                 </div>
                                             </div>
                                         </div>
@@ -56,7 +57,7 @@
                                             <div class="item-inner">
                                                 <div class="item-title label">Bed No.</div>
                                                 <div class="item-input">
-                                                    <input type="email" placeholder="Bed Number" id="Bed No.">
+                                                    <input type="email" placeholder="Bed Number" id="bedNo">
                                                 </div>
                                             </div>
                                         </div>
@@ -69,8 +70,8 @@
                                                 <div class="item-title label">Gender</div>
                                                 <div class="item-input">
                                                     <select id="Gender">
-                                                        <option>Male</option>
-                                                        <option>Female</option>
+                                                        <option value="0">Male</option>
+                                                        <option value="1">Female</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -83,7 +84,7 @@
                                             <div class="item-inner">
                                                 <div class="item-title label">Mother Name</div>
                                                 <div class="item-input">
-                                                    <input type="email" placeholder="Mother Name" id="Mother Name">
+                                                    <input type="text" placeholder="Mother Name" id="motherName">
                                                 </div>
                                             </div>
                                         </div>
@@ -95,14 +96,14 @@
                                             <div class="item-inner">
                                                 <div class="item-title label">Birth Date time</div>
                                                 <div class="item-input">
-                                                    <input type="datetime-local" placeholder="Birth day time" id="Birth Date time" value="">
+                                                    <input type="datetime-local" placeholder="Birth day time" id="birthDateTime" value="">
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
                                 <div>
-                                    <a class="button button-fill" id="Createbaby-Button" href="BabiesList.html">Add Baby</a>
+                                    <a class="button button-fill" id="Createbaby-Button" onClick="addBaby()" href="BabiesList.html">Add Baby</a>
                                 </div>
                             </div>
                         </form>
@@ -115,7 +116,7 @@
     <script type="text/javascript" src="js/framework7.min.js"></script>
     <!-- Path to your app js-->
     <script type="text/javascript" src="js/my-app.js"></script>
-    <script type="text/javascript" src="cordova.js"></script>
+<!--    <script type="text/javascript" src="cordova.js"></script>-->
     <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
