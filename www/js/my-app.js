@@ -163,21 +163,21 @@ function login(){
 }
 
 // Callbacks to run specific code for specific pages, for example for About page:
-myApp.onPageInit('addbaby', function (page) {
-    // run createContentPage func after link was clicked
-    $$('#Createbaby-Button').on('click', function () {
-        generateBaby();
-    });
-});
+//myApp.onPageInit('addbaby', function (page) {
+//    // run createContentPage func after link was clicked
+//    $$('#Createbaby-Button').on('click', function () {
+//        generateBaby();
+//    });
+//});
 
-function generateBaby() {
+/*function generateBaby() {
     var child = document.getElementById("Child No.").value;
     var bed = document.getElementById("Bed No.").value;
     var gen = document.getElementById("Gender").value;
     var mothname = document.getElementById("Mother Name").value;
     var bday = document.getElementById("Birth Date time").value;
     alert(child+':'+bed+','+gen+','+mothname+','+bday);
-}
+}*/
 
 // //confirm function
 // myApp.confirm(text, [title, callbackOk, callbackCancel]) {
@@ -224,4 +224,29 @@ function createContentPage() {
         '</div>'
     );
 	return;
+}
+
+function addBaby(){
+	var childno = document.getElementById("childNo").value;
+	var bedno = document.getElementById("bedNo").value;
+	var gender = document.getElementById("Gender").value;
+	var mothername = document.getElementById("motherName").value;
+	var birthdate = document.getElementById("birthDateTime").value;
+	
+if(window.localStorage.getItem('babieslist') === null){
+	alert("null");
+	var babies = [];
+	var babyList = window.localStorage;
+	} else{
+		var babyList = window.localStorage;
+		var babies = JSON.parse(window.localStorage.getItem('babieslist'));
+		}
+	babies.push({
+		child_no: childno,
+		bed_no: bedno,
+		gender: gender,
+		mother_name: mothername,
+		birthDateTime: birthdate
+	});
+	babyList.setItem('babieslist', JSON.stringify(babies));
 }

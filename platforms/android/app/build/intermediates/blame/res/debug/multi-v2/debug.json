@@ -1,10 +1,32 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/nuthakki/Desktop/hello1/platforms/android/app/build/intermediates/res/merged/debug/values_values.arsc.flat",
+            "outputFile": "C:\\Users\\siva0\\Desktop\\eceb\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/nuthakki/Desktop/hello1/platforms/android/app/src/main/res/values/strings.xml",
+                    "source": "C:\\Users\\siva0\\Desktop\\eceb\\platforms\\android\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "4,2,3",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "156,55,97",
+                        "endColumns": "63,41,58",
+                        "endOffsets": "215,92,151"
+                    },
+                    "to": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,119,161",
+                        "endColumns": "63,41,58",
+                        "endOffsets": "114,156,215"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\nuthakki\\Desktop\\hello1\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\nuthakki\\Desktop\\hello1\\platforms\\android\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "-1,2,-1",
                         "startColumns": "-1,4,-1",
@@ -23,10 +45,10 @@
             ]
         },
         {
-            "outputFile": "/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/res/merged/debug/values_values.arsc.flat",
+            "outputFile": "C:\\Users\\nuthakki\\Desktop\\eceb_framework7\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/src/main/res/values/strings.xml",
+                    "source": "C:\\Users\\nuthakki\\Desktop\\eceb_framework7\\platforms\\android\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "4,2,3",
                         "startColumns": "4,4,4",
