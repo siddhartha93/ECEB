@@ -53,3 +53,15 @@
     width: 100px;
     height: 35px;
 }
+
+#CreateBabyButton{
+    width: 100px;
+    height: 35px;
+    margin: 0 auto;
+}
+
+#AddBabyButton{
+    width: 200px;
+    height: 35px;
+    margin: 0 auto;
+}

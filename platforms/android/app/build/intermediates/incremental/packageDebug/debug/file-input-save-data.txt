@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Apr 11 17:43:40 EDT 2018
+#Tue May 01 18:01:27 EDT 2018
 5.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug
 42.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_
 32.set=ASSET
@@ -19,7 +19,7 @@
 32.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug
 65.file=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_/res/drawable-port-xhdpi-v4/screen.png
 17.set=ANDROID_RESOURCE
-50.set=ANDROID_RESOURCE
+50.set=ASSET
 68.set=ASSET
 4.file=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_/resources.arsc
 26.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug
@@ -28,7 +28,7 @@
 36.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug
 69.file=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_/res/mipmap-ldpi-v4/icon.png
 57.set=ASSET
-51.file=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug/www/BPhase2.html
+51.file=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_/AndroidManifest.xml
 61.file=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_/res/xml/config.xml
 8.file=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug/www/index.html
 12.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug
@@ -39,7 +39,7 @@
 35.set=ASSET
 21.file=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug/www/cordova-js-src/android/promptbasednativeapi.js
 16.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug
-49.file=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug/www/img/logo.png
+49.file=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug/www/BPhase2.html
 31.file=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug/www/ProblemPoorFeeding.html
 59.file=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug/www/js/framework7.min.js
 24.set=ASSET
@@ -105,7 +105,7 @@ count=72
 68.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug
 12.set=ASSET
 12.file=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug/www/cordova-js-src/platform.js
-50.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_
+50.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug
 63.set=ASSET
 60.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_
 7.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_
@@ -160,7 +160,7 @@ count=72
 69.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_
 22.set=ASSET
 13.file=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug/www/js/framework7.js
-51.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug
+51.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_
 61.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_
 8.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug
 11.set=ASSET
@@ -171,7 +171,7 @@ count=72
 70.file=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug/www/plugins/cordova-plugin-splashscreen/www/splashscreen.js
 18.set=ASSET
 21.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug
-51.set=ASSET
+51.set=ANDROID_RESOURCE
 69.set=ANDROID_RESOURCE
 49.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug
 31.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug
@@ -186,7 +186,7 @@ count=72
 35.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug
 68.file=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug/www/js/index.js
 9.set=ASSET
-50.file=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_/AndroidManifest.xml
+50.file=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/assets/debug/www/img/logo.png
 47.set=ANDROID_RESOURCE
 19.base=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_
 60.file=/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_/res/mipmap-xhdpi-v4/icon.png
