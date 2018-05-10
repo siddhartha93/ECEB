@@ -249,6 +249,7 @@ if(window.localStorage.getItem('babieslist') === null){
 		birthDateTime: birthdate
 	});
 	babyList.setItem('babieslist', JSON.stringify(babies));
+<<<<<<< HEAD
 }
 
 function babyDetails(){
@@ -301,3 +302,6 @@ if(window.localStorage.getItem('babydetails') === null){
 //         Parents_homecare: Parentshomecare
 //
 // }
+=======
+}
+>>>>>>> a0645248389f93065b94383963d087ecdc2d90a7
