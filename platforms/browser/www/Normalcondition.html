@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -15,6 +14,11 @@
     <link rel="stylesheet" href="css/framework7.material.colors.min.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/my-app.css">
+    <!--<script>-->
+        <!--if(document.getElementById('NormalTemp').checked==true){-->
+            <!--return-->
+        <!--}-->
+    <!--</script>-->
 </head>
 <body>
 <div class="views">
@@ -53,10 +57,10 @@
 
                             <!-- Single chekbox item -->
                             <li>
-                                <label class="label-radio item-content">
-                                    <input type="checkbox" name="my-checkbox" value="NormalTemp">
+                                <label class="label-checkbox item-content">
+                                    <input type="checkbox" name="my-checkbox" id="NormalTemp">
                                     <div class="item-media">
-                                        <i class="icon icon-form-radio"></i>
+                                        <i class="icon icon-form-checkbox"></i>
                                     </div>
                                     <div class="item-inner">
                                         <div class="item-title">Maintain Normal Temperature</div>
@@ -65,10 +69,10 @@
                             </li>
                             <!-- Another chekbox item -->
                             <li>
-                                <label class="label-radio item-content disabled">
-                                    <input type="checkbox" name="my-checkbox" value="Breastfeeding">
+                                <label class="label-checkbox item-content">
+                                    <input type="checkbox" name="my-checkbox" id="Breastfeeding">
                                     <div class="item-media">
-                                        <i class="icon icon-form-radio"></i>
+                                        <i class="icon icon-form-checkbox"></i>
                                     </div>
                                     <div class="item-inner">
                                         <div class="item-title">Support Breastfeeding</div>
@@ -77,10 +81,10 @@
                             </li>
                             <!-- Another chekbox item -->
                             <li>
-                                <label class="label-radio item-content disabled">
-                                    <input type="checkbox" name="my-checkbox" value="AdviceOnBreastFeeding">
+                                <label class="label-checkbox item-content">
+                                    <input type="checkbox" name="my-checkbox" id="AdviceOnBreastFeeding">
                                     <div class="item-media">
-                                        <i class="icon icon-form-radio"></i>
+                                        <i class="icon icon-form-checkbox"></i>
                                     </div>
                                     <div class="item-inner">
                                         <div class="item-title">Advice on breast feeding</div>
@@ -90,10 +94,10 @@
 
                             <!-- Another chekbox item -->
                             <li>
-                                <label class="label-radio item-content disabled">
-                                    <input type="checkbox" name="my-checkbox" value="Immunize">
+                                <label class="label-checkbox item-content">
+                                    <input type="checkbox" name="my-checkbox" id="Immunize">
                                     <div class="item-media">
-                                        <i class="icon icon-form-radio"></i>
+                                        <i class="icon icon-form-checkbox"></i>
                                     </div>
                                     <div class="item-inner">
                                         <div class="item-title">Immunize</div>
@@ -102,10 +106,10 @@
                             </li>
                             <!-- Another chekbox item -->
                             <li>
-                                <label class="label-radio item-content disabled">
-                                    <input type="checkbox" name="my-checkbox" value="BabyForDischarge">
+                                <label class="label-checkbox item-content">
+                                    <input type="checkbox" name="my-checkbox" id="BabyForDischarge">
                                     <div class="item-media">
-                                        <i class="icon icon-form-radio"></i>
+                                        <i class="icon icon-form-checkbox"></i>
                                     </div>
                                     <div class="item-inner">
                                         <div class="item-title">Reassess baby for discharge</div>
@@ -114,10 +118,10 @@
                             </li>
                             <!-- Another chekbox item -->
                             <li>
-                                <label class="label-radio item-content disabled">
-                                    <input type="checkbox" name="my-checkbox" value="HomeCare">
+                                <label class="label-checkbox item-content disabled">
+                                    <input type="checkbox" name="my-checkbox" id="HomeCare">
                                     <div class="item-media">
-                                        <i class="icon icon-form-radio"></i>
+                                        <i class="icon icon-form-checkbox"></i>
                                     </div>
                                     <div class="item-inner">
                                         <div class="item-title">Give Parents Guidance for Home care</div>
@@ -127,7 +131,7 @@
                         </ul>
                     </div>
                     <div>
-                        <a class="button button-fill" id="" href="#">Submit</a>
+                        <a class="button button-fill" onClick="babyDetails()">Submit</a>
                     </div>
                 </div>
             </div>
@@ -138,7 +142,7 @@
 <script type="text/javascript" src="js/framework7.min.js"></script>
 <!-- Path to your app js-->
 <script type="text/javascript" src="js/my-app.js"></script>
-<script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+<!--<script type="text/javascript" src="cordova.js"></script>-->
+<!--<script type="text/javascript" src="js/index.js"></script>-->
 </body>
 </html>

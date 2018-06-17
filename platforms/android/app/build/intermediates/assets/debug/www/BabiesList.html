@@ -17,11 +17,16 @@
     <link rel="stylesheet" href="css/my-app.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
+	function localcookie(a){
+		window.localStorage.setItem("cookie", a);
+	}
+	</script>
+    <script>
 	$(document).ready(function(){
 		if(window.localStorage.getItem('babieslist')!= null){
 		var list = JSON.parse(window.localStorage.getItem('babieslist'));
 		for(i=0;i<list.length;i++){
-			$("#list ul").append('<li><a class="item-link item-content confirm-ok-cancel"> <div class="item-inner"><div class="item-title-row"><div class="item-title">Baby'+(i+1)+'</div><div class="item-after" id="write">'+'</div></div><div class="item-text">Mother Name:'+list[i].mother_name+', Child.No'+list[i].child_no+'</div></div></a></li>');
+			$("#list ul").append('<li><a href="BPhase1.html" class="item-link item-content confirm-ok-cancel"'+'onClick="localcookie('+i+')"'+'> <div class="item-inner"><div class="item-title-row"><div class="item-title">Baby'+(i+1)+'   '+'baby of '+list[i].mother_name+'</div><div class="item-after" id="write">'+'</div></div><div class="item-text">Mother Name:'+list[i].mother_name+', Child.No'+list[i].bed_no+'</div></div></a></li>');
 		}
 		}
 	});

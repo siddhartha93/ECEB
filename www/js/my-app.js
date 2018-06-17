@@ -232,7 +232,9 @@ function addBaby(){
 	var gender = document.getElementById("Gender").value;
 	var mothername = document.getElementById("motherName").value;
 	var birthdate = document.getElementById("birthDateTime").value;
-	
+
+
+
 if(window.localStorage.getItem('babieslist') === null){
 	alert("null");
 	var babies = [];
@@ -249,7 +251,6 @@ if(window.localStorage.getItem('babieslist') === null){
 		birthDateTime: birthdate
 	});
 	babyList.setItem('babieslist', JSON.stringify(babies));
-<<<<<<< HEAD
 }
 
 function babyDetails(){
@@ -262,17 +263,21 @@ function babyDetails(){
     var examine = document.getElementById("exam").value;
     var temperature = document.getElementById("temperature").value;
     var weight = document.getElementById("weight").value;
+    var currentbabyno =parseInt(window.localStorage.getItem('cookie'));
+    var babydata = JSON.parse(window.localStorage.getItem('babieslist'));
+    var babyno = babydata[currentbabyno].child_no;
 
 
 if(window.localStorage.getItem('babydetails') === null){
-      alert('hi');
       var babiesdetails = [];
       var babydetailsList = window.localStorage;
     } else {
         var babydetailsList = window.localStorage;
         var babiesdetails = JSON.parse(window.localStorage.getItem('babydetails'));
     }
+
     babiesdetails.push({
+        child_no:babyno,
         skin_skin: skintoskin,
         breath: breathing,
         breast_feeding: breastfeeding,
@@ -286,22 +291,150 @@ if(window.localStorage.getItem('babydetails') === null){
     babydetailsList.setItem('babydetails', JSON.stringify(babiesdetails));
 }
 
-// function dummy(){
-//     var NormTemp = document.getElementById("NormalTemp").checked;
-//     var Supportbreastfeeding = document.getElementById("Breastfeeding").checked;
-//     var Advicebreastfeeding = document.getElementById("AdviceOnBreastFeeding").checked;
-//     var Immunize = document.getElementById("Immunize").checked;
-//     var AssessbabyDischarge = document.getElementById("BabyForDischarge").checked;
-//     var Parentshomecare = document.getElementById("HomeCare").checked;
-//
-//     Norm_temp: NormTemp,
-//         Support_breastfeeding: Supportbreastfeeding,
-//         Advice_breastfeeding: Advicebreastfeeding,
-//         Immunize: Immunize,
-//         Assess_babydischarge: AssessbabyDischarge,
-//         Parents_homecare: Parentshomecare
-//
-// }
-=======
+
+function normal(){
+    var normtemp = document.getElementById("NormalTemp").checked;
+    var breastfeed = document.getElementById("Breastfeeding").checked;
+    var advicebrstfeed = document.getElementById("AdviceOnBreastFeeding").checked;
+    var immunize = document.getElementById("Immunize").checked;
+    var discharge = document.getElementById("BabyForDischarge").checked;
+    var homecare = document.getElementById("HomeCare").checked;
+    var currentbabyno =parseInt(window.localStorage.getItem('cookie'));
+    var babydata = JSON.parse(window.localStorage.getItem('babieslist'));
+    var babyno = babydata[currentbabyno].child_no;
+
+
+    if(window.localStorage.getItem('normaldetails') === null){
+        var normaldetails = [];
+        var normaldetailsList = window.localStorage;
+    } else {
+        var normaldetailsList = window.localStorage;
+        var normaldetails = JSON.parse(window.localStorage.getItem('normaldetails'));
+    }
+
+    normaldetails.push({
+        child_no:babyno,
+        norm_temp: normtemp,
+        breast_feed: breastfeed,
+        advice_breastfeed: advicebrstfeed,
+        immune: immunize,
+        discharge: discharge,
+        homecare: homecare
+    });
+    normaldetailsList.setItem('normaldetails', JSON.stringify(normaldetails));
 }
->>>>>>> a0645248389f93065b94383963d087ecdc2d90a7
+
+function abnormal(){
+    var thermalcare = document.getElementById("ThermalCare").checked;
+    var normal = document.getElementById("NormalTemperature").checked;
+    // var normtemp = document.getElementById("NormalTemp").checked;
+    // var breastfeed = document.getElementById("Breastfeeding").checked;
+    // var advicebrstfeed = document.getElementById("AdviceOnBreastFeeding").checked;
+    // var immunize = document.getElementById("Immunize").checked;
+    // var discharge = document.getElementById("BabyForDischarge").checked;
+    // var homecare = document.getElementById("HomeCare").checked;
+    var continuedthermalsupport = document.getElementById("ContinuedThermalSupport").checked;
+    var continuedsupport = document.getElementById("ContinuedSupport").checked;
+    var currentbabyno =parseInt(window.localStorage.getItem('cookie'));
+    var babydata = JSON.parse(window.localStorage.getItem('babieslist'));
+    var babyno = babydata[currentbabyno].child_no;
+
+
+    if(window.localStorage.getItem('abnormaldetails') === null){
+        var abnormaldetails = [];
+        var abnormaldetailsList = window.localStorage;
+    } else {
+        var abnormaldetailsList = window.localStorage;
+        var abnormaldetails = JSON.parse(window.localStorage.getItem('abnormaldetails'));
+    }
+
+    abnormaldetails.push({
+        child_no:babyno,
+        thermalcare: thermalcare,
+        normal: normal,
+        // norm_temp: normtemp,
+        // breast_feed: breastfeed,
+        // advice_breastfeed: advicebrstfeed,
+        // immune: immunize,
+        // discharge: discharge,
+        // homecare: homecare,
+        continuedthermalsupport: continuedthermalsupport,
+        continuedsupport: continuedsupport
+    });
+    abnormaldetailsList.setItem('abnormaldetails', JSON.stringify(abnormaldetails));
+}
+
+
+function underwt(){
+    var skintoskin = document.getElementById("ThermalCare").checked;
+    var continuedsupport = document.getElementById("ContinuedSupport").checked;
+    var currentbabyno =parseInt(window.localStorage.getItem('cookie'));
+    var babydata = JSON.parse(window.localStorage.getItem('babieslist'));
+    var babyno = babydata[currentbabyno].child_no;
+
+
+    if(window.localStorage.getItem('underwtdetails') === null){
+        var underwtdetails = [];
+        var underwtdetailsList = window.localStorage;
+    } else {
+        var underwtdetailsList = window.localStorage;
+        var underwtdetails = JSON.parse(window.localStorage.getItem('underwtdetails'));
+    }
+
+    underwtdetails.push({
+        child_no:babyno,
+        skin_skin: skintoskin,
+        continuedsupport: continuedsupport
+    });
+    underwtdetailsList.setItem('underwtdetails', JSON.stringify(underwtdetails));
+}
+
+
+function poorfeeding(){
+    var breastmilk = document.getElementById("BreastMilk").checked;
+    var feeding = document.getElementById("AlternateFeedingMethod").checked;
+    var continuedsupport = document.getElementById("ContinuedSupport").checked;
+    var currentbabyno =parseInt(window.localStorage.getItem('cookie'));
+    var babydata = JSON.parse(window.localStorage.getItem('babieslist'));
+    var babyno = babydata[currentbabyno].child_no;
+
+
+    if(window.localStorage.getItem('poorfeedingdetails') === null){
+        var poorfeedingdetails = [];
+        var poorfeedingdetailsList = window.localStorage;
+    } else {
+        var poorfeedingdetailsList = window.localStorage;
+        var poorfeedingdetails = JSON.parse(window.localStorage.getItem('poorfeedingdetails'));
+    }
+
+    poorfeedingdetails.push({
+        child_no:babyno,
+        breastmilk: breastmilk,
+        feeding: feeding,
+        continuedsupport: continuedsupport
+    });
+    poorfeedingdetailsList.setItem('poorfeedingdetails', JSON.stringify(poorfeedingdetails));
+}
+
+
+function dangersign(){
+    var antibiotics = document.getElementById("Antibiotics").checked;
+    var currentbabyno =parseInt(window.localStorage.getItem('cookie'));
+    var babydata = JSON.parse(window.localStorage.getItem('babieslist'));
+    var babyno = babydata[currentbabyno].child_no;
+
+
+    if(window.localStorage.getItem('dangersigndetails') === null){
+        var dangersigndetails = [];
+        var dangersigndetailsList = window.localStorage;
+    } else {
+        var dangersigndetailsList = window.localStorage;
+        var dangersigndetails = JSON.parse(window.localStorage.getItem('dangersigndetails'));
+    }
+
+    dangersigndetails.push({
+        child_no:babyno,
+        antibiotics: antibiotics
+    });
+    dangersigndetailsList.setItem('dangersigndetails', JSON.stringify(dangersigndetails));
+}

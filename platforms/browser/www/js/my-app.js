@@ -249,4 +249,59 @@ if(window.localStorage.getItem('babieslist') === null){
 		birthDateTime: birthdate
 	});
 	babyList.setItem('babieslist', JSON.stringify(babies));
+<<<<<<< HEAD
 }
+
+function babyDetails(){
+    var skintoskin = document.getElementById("skinToSkin").checked;
+    var breathing = document.getElementById("Breathing").checked;
+    var breastfeeding = document.getElementById("breastFeeding").checked;
+    var eyecare = document.getElementById("Eyecare").checked;
+    var cordcare = document.getElementById("Cordcare").checked;
+    var vitamink = document.getElementById("VitaminK").checked;
+    var examine = document.getElementById("exam").value;
+    var temperature = document.getElementById("temperature").value;
+    var weight = document.getElementById("weight").value;
+
+
+if(window.localStorage.getItem('babydetails') === null){
+      alert('hi');
+      var babiesdetails = [];
+      var babydetailsList = window.localStorage;
+    } else {
+        var babydetailsList = window.localStorage;
+        var babiesdetails = JSON.parse(window.localStorage.getItem('babydetails'));
+    }
+    babiesdetails.push({
+        skin_skin: skintoskin,
+        breath: breathing,
+        breast_feeding: breastfeeding,
+        eye_care: eyecare,
+        cord_care: cordcare,
+        vitamin_k: vitamink,
+        examination: examine,
+        temp: temperature,
+        weight: weight
+    });
+    babydetailsList.setItem('babydetails', JSON.stringify(babiesdetails));
+}
+
+// function dummy(){
+//     var NormTemp = document.getElementById("NormalTemp").checked;
+//     var Supportbreastfeeding = document.getElementById("Breastfeeding").checked;
+//     var Advicebreastfeeding = document.getElementById("AdviceOnBreastFeeding").checked;
+//     var Immunize = document.getElementById("Immunize").checked;
+//     var AssessbabyDischarge = document.getElementById("BabyForDischarge").checked;
+//     var Parentshomecare = document.getElementById("HomeCare").checked;
+//
+//     Norm_temp: NormTemp,
+//         Support_breastfeeding: Supportbreastfeeding,
+//         Advice_breastfeeding: Advicebreastfeeding,
+//         Immunize: Immunize,
+//         Assess_babydischarge: AssessbabyDischarge,
+//         Parents_homecare: Parentshomecare
+//
+// }
+=======
+}
+>>>>>>> a0645248389f93065b94383963d087ecdc2d90a7

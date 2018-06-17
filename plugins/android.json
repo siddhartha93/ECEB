@@ -7,19 +7,19 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.example.hello"
-    },
-    "ionic-plugin-keyboard": {
-      "PACKAGE_NAME": "com.example.hello"
-    },
     "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.example.hello"
+    },
+    "cordova-plugin-ionic-webview": {
       "PACKAGE_NAME": "com.example.hello"
     },
     "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "com.example.hello"
     },
-    "cordova-plugin-ionic-webview": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.example.hello"
+    },
+    "ionic-plugin-keyboard": {
       "PACKAGE_NAME": "com.example.hello"
     }
   },
