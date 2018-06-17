@@ -438,3 +438,51 @@ function dangersign(){
     });
     dangersigndetailsList.setItem('dangersigndetails', JSON.stringify(dangersigndetails));
 }
+
+
+function babyTimer() {
+// Baby birth datetime
+    var birthDate = new Date().getTime();
+
+// Update the count down every 1 second
+    var x = setInterval(function() {
+
+        // Get todays date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now an the birth date
+        var distance = now - birthDate;
+
+        // Time calculations for days, hours, minutes and seconds
+        // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+
+        document.getElementById("time").innerHTML = hours + "h " + minutes + "m " + seconds + "s " + "Minutes after birth";
+
+        // If the count down is over, write some text
+        if ( hours > 23) {
+            clearInterval(x);
+            document.querySelector('time').innerHTML = "EXPIRED";
+        }
+    }, 1000);
+
+    var y =  setTimeout(myTimeout1, 3600000)
+
+    function myTimeout1() {
+        alert("End of 1st phase");
+    }
+
+    var z =  setTimeout(myTimeout2, 5400000)
+    function myTimeout2() {
+        alert("End of 2nd phase");
+    }
+
+    var s =  setTimeout(myTimeout3, 86400000)
+    function myTimeout3() {
+        alert("End of 24hours");
+    }
+}
