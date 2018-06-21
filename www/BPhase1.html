@@ -20,6 +20,7 @@
 		var item = window.localStorage.getItem("cookie");
 		alert(list);
 		$("#name").append('Baby of '+list[item].mother_name);
+		 babyTimer();
 	});
 	</script>
 </head>
@@ -55,7 +56,7 @@
                                     <div class="item-inner">
                                         <div class="item-title-row">
                                             <div class="item-title" id="name"> </div>
-                                            <div class="item-after" id="write">Hello <span id="time"></span></span></div>
+                                            <div class="item-after" id="write"> <span id="time"></span></span></div>
                                         </div>
                                     </div>
                                 </a>

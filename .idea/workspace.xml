@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96a95c2c-f360-4ce2-a24a-1fbe32ddb4f8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/AddBaby.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/AddBaby.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/BPhase1.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/BPhase1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/my-app.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/my-app.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +18,8 @@
       <file leaf-file-name="AddBaby.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/AddBaby.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="105" column="120" selection-start-line="105" selection-start-column="120" selection-end-line="105" selection-end-column="120" />
+            <state relative-caret-position="330">
+              <caret line="105" column="107" selection-start-line="105" selection-start-column="107" selection-end-line="105" selection-end-column="107" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -30,8 +30,8 @@
       <file leaf-file-name="BabiesList.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/BabiesList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+            <state relative-caret-position="315">
+              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -39,8 +39,8 @@
       <file leaf-file-name="Normalcondition.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/Normalcondition.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1632">
-              <caret line="130" column="29" lean-forward="true" selection-start-line="130" selection-start-column="29" selection-end-line="130" selection-end-column="29" />
+            <state relative-caret-position="1635">
+              <caret line="109" column="59" selection-start-line="109" selection-start-column="59" selection-end-line="109" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -48,17 +48,17 @@
       <file leaf-file-name="DangerSign.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/DangerSign.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
+            <state relative-caret-position="1335">
               <caret line="89" column="81" selection-start-line="89" selection-start-column="81" selection-end-line="89" selection-end-column="81" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BPhase1.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BPhase1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/BPhase1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="57" column="90" selection-start-line="57" selection-start-column="90" selection-end-line="57" selection-end-column="90" />
+            <state relative-caret-position="435">
+              <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -66,17 +66,17 @@
       <file leaf-file-name="BPhase2.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/BPhase2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="846">
+            <state relative-caret-position="1140">
               <caret line="76" column="89" selection-start-line="76" selection-start-column="82" selection-end-line="76" selection-end-column="89" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my-app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="my-app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/my-app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="463" column="65" selection-start-line="463" selection-start-column="65" selection-end-line="463" selection-end-column="65" />
+            <state relative-caret-position="6660">
+              <caret line="444" column="41" lean-forward="true" selection-start-line="444" selection-start-column="41" selection-end-line="444" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -117,9 +117,9 @@
         <option value="$PROJECT_DIR$/www/ProblemUnderWt.html" />
         <option value="$PROJECT_DIR$/www/ProblemPoorFeeding.html" />
         <option value="$PROJECT_DIR$/www/DangerSign.html" />
-        <option value="$PROJECT_DIR$/www/AddBaby.html" />
-        <option value="$PROJECT_DIR$/www/BPhase1.html" />
         <option value="$PROJECT_DIR$/www/js/my-app.js" />
+        <option value="$PROJECT_DIR$/www/BPhase1.html" />
+        <option value="$PROJECT_DIR$/www/AddBaby.html" />
       </list>
     </option>
   </component>
@@ -134,10 +134,10 @@
     <handled-path value="$PROJECT_DIR$/platforms/android/cordova/node_modules" />
     <handled-path value="$PROJECT_DIR$/platforms/browser/cordova/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="37" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="36" />
     <option name="y" value="23" />
-    <option name="width" value="1243" />
+    <option name="width" value="1244" />
     <option name="height" value="777" />
   </component>
   <component name="ProjectView">
@@ -145,6 +145,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,19 +158,12 @@
               <item name="eceb_framework7" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="eceb_framework7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eceb_framework7" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,15 +268,17 @@
       <workItem from="1528605429132" duration="686000" />
       <workItem from="1528856882057" duration="259000" />
       <workItem from="1529020190043" duration="563000" />
-      <workItem from="1529145303623" duration="17859000" />
+      <workItem from="1529145303623" duration="17949000" />
+      <workItem from="1529363246629" duration="2405000" />
+      <workItem from="1529457008613" duration="2490000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103041000" />
+    <option name="totallyTimeSpent" value="108026000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="37" y="23" width="1243" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
@@ -298,7 +294,7 @@
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.23828125" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.24456958" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
@@ -606,55 +602,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/Normalcondition.html">
+    <entry file="file://$PROJECT_DIR$/www/BPhase2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="130" column="29" lean-forward="true" selection-start-line="130" selection-start-column="29" selection-end-line="130" selection-end-column="29" />
+        <state relative-caret-position="1140">
+          <caret line="76" column="89" selection-start-line="76" selection-start-column="82" selection-end-line="76" selection-end-column="89" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/DangerSign.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
+        <state relative-caret-position="1335">
           <caret line="89" column="81" selection-start-line="89" selection-start-column="81" selection-end-line="89" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Normalcondition.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1635">
+          <caret line="109" column="59" selection-start-line="109" selection-start-column="59" selection-end-line="109" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/BabiesList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/AddBaby.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="105" column="120" selection-start-line="105" selection-start-column="120" selection-end-line="105" selection-end-column="120" />
+        <state relative-caret-position="330">
+          <caret line="105" column="107" selection-start-line="105" selection-start-column="107" selection-end-line="105" selection-end-column="107" />
           <folding>
             <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/BPhase2.html">
+    <entry file="file://$PROJECT_DIR$/www/BPhase1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="76" column="89" selection-start-line="76" selection-start-column="82" selection-end-line="76" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/BabiesList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        <state relative-caret-position="435">
+          <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/my-app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="463" column="65" selection-start-line="463" selection-start-column="65" selection-end-line="463" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/BPhase1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="57" column="90" selection-start-line="57" selection-start-column="90" selection-end-line="57" selection-end-column="90" />
+        <state relative-caret-position="6660">
+          <caret line="444" column="41" lean-forward="true" selection-start-line="444" selection-start-column="41" selection-end-line="444" selection-end-column="41" />
         </state>
       </provider>
     </entry>
