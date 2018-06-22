@@ -257,12 +257,6 @@ function babyDetails(){
     var skintoskin = document.getElementById("skinToSkin").checked;
     var breathing = document.getElementById("Breathing").checked;
     var breastfeeding = document.getElementById("breastFeeding").checked;
-    var eyecare = document.getElementById("Eyecare").checked;
-    var cordcare = document.getElementById("Cordcare").checked;
-    var vitamink = document.getElementById("VitaminK").checked;
-    var examine = document.getElementById("exam").value;
-    var temperature = document.getElementById("temperature").value;
-    var weight = document.getElementById("weight").value;
     var currentbabyno =parseInt(window.localStorage.getItem('cookie'));
     var babydata = JSON.parse(window.localStorage.getItem('babieslist'));
     var babyno = babydata[currentbabyno].child_no;
@@ -280,7 +274,34 @@ if(window.localStorage.getItem('babydetails') === null){
         child_no:babyno,
         skin_skin: skintoskin,
         breath: breathing,
-        breast_feeding: breastfeeding,
+        breast_feeding: breastfeeding
+    });
+    babydetailsList.setItem('babydetails', JSON.stringify(babiesdetails));
+}
+
+
+function babyDetails1() {
+    var eyecare = document.getElementById("Eyecare").checked;
+    var cordcare = document.getElementById("Cordcare").checked;
+    var vitamink = document.getElementById("VitaminK").checked;
+    var examine = document.getElementById("exam").value;
+    var temperature = document.getElementById("temperature").value;
+    var weight = document.getElementById("weight").value;
+    var currentbabyno = parseInt(window.localStorage.getItem('cookie'));
+    var babydata = JSON.parse(window.localStorage.getItem('babieslist'));
+    var babyno = babydata[currentbabyno].child_no;
+
+
+    if (window.localStorage.getItem('babydetails1') === null) {
+        var babiesdetails1 = [];
+        var babydetailsList1 = window.localStorage;
+    } else {
+        var babydetailsList1 = window.localStorage;
+        var babiesdetails1 = JSON.parse(window.localStorage.getItem('babydetails1'));
+    }
+
+    babiesdetails1.push({
+        child_no: babyno,
         eye_care: eyecare,
         cord_care: cordcare,
         vitamin_k: vitamink,
@@ -288,7 +309,7 @@ if(window.localStorage.getItem('babydetails') === null){
         temp: temperature,
         weight: weight
     });
-    babydetailsList.setItem('babydetails', JSON.stringify(babiesdetails));
+    babydetailsList1.setItem('babydetails1', JSON.stringify(babiesdetails1));
 }
 
 
@@ -442,6 +463,8 @@ function dangersign(){
 
 function babyTimer() {
 // Baby birth datetime
+//     var testbirthdate = list[i].birthDateTime.getTime();
+//     console.log(testbirthdate)
     var birthDate = new Date().getTime();
 
 // Update the count down every 1 second
