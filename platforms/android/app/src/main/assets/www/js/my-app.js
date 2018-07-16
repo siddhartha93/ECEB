@@ -232,14 +232,14 @@ function addBaby(){
 	var gender = document.getElementById("Gender").value;
 	var mothername = document.getElementById("motherName").value;
 	var birthdate = document.getElementById("birthDateTime").value;
-	
+
 if(window.localStorage.getItem('babieslist') === null){
 	alert("null");
 	var babies = [];
 	var babyList = window.localStorage;
 	} else{
-		var babyList = window.localStorage;
-		var babies = JSON.parse(window.localStorage.getItem('babieslist'));
+		babyList = window.localStorage;
+		babies = JSON.parse(window.localStorage.getItem('babieslist'));
 		}
 	babies.push({
 		child_no: childno,
@@ -249,35 +249,59 @@ if(window.localStorage.getItem('babieslist') === null){
 		birthDateTime: birthdate
 	});
 	babyList.setItem('babieslist', JSON.stringify(babies));
+	location.href="BabiesList.html";
 }
+
 
 function babyDetails(){
     var skintoskin = document.getElementById("skinToSkin").checked;
     var breathing = document.getElementById("Breathing").checked;
     var breastfeeding = document.getElementById("breastFeeding").checked;
-    var eyecare = document.getElementById("Eyecare").checked;
-    var cordcare = document.getElementById("Cordcare").checked;
-    var vitamink = document.getElementById("VitaminK").checked;
-    var examine = document.getElementById("exam").value;
-    var temperature = document.getElementById("temperature").value;
-    var weight = document.getElementById("weight").value;
-
-
+    var currentbabyno =parseInt(window.localStorage.getItem('cookie'));
+    var babydata = JSON.parse(window.localStorage.getItem('babieslist'));
+    var babyno = babydata[currentbabyno].child_no;
 
 
 if(window.localStorage.getItem('babydetails') === null){
-      alert('hi');
       var babiesdetails = [];
       var babydetailsList = window.localStorage;
     } else {
         var babydetailsList = window.localStorage;
         var babiesdetails = JSON.parse(window.localStorage.getItem('babydetails'));
     }
+
     babiesdetails.push({
-        
+        child_no:babyno,
         skin_skin: skintoskin,
         breath: breathing,
-        breast_feeding: breastfeeding,
+        breast_feeding: breastfeeding
+    });
+    babydetailsList.setItem('babydetails', JSON.stringify(babiesdetails));
+}
+
+
+function babyDetails1() {
+    var eyecare = document.getElementById("Eyecare").checked;
+    var cordcare = document.getElementById("Cordcare").checked;
+    var vitamink = document.getElementById("VitaminK").checked;
+    var examine = document.getElementById("exam").value;
+    var temperature = document.getElementById("temperature").value;
+    var weight = document.getElementById("weight").value;
+    var currentbabyno = parseInt(window.localStorage.getItem('cookie'));
+    var babydata = JSON.parse(window.localStorage.getItem('babieslist'));
+    var babyno = babydata[currentbabyno].child_no;
+
+
+    if (window.localStorage.getItem('babydetails1') === null) {
+        var babiesdetails1 = [];
+        var babydetailsList1 = window.localStorage;
+    } else {
+        var babydetailsList1 = window.localStorage;
+        var babiesdetails1 = JSON.parse(window.localStorage.getItem('babydetails1'));
+    }
+
+    babiesdetails1.push({
+        child_no: babyno,
         eye_care: eyecare,
         cord_care: cordcare,
         vitamin_k: vitamink,
@@ -285,5 +309,277 @@ if(window.localStorage.getItem('babydetails') === null){
         temp: temperature,
         weight: weight
     });
-    babydetailsList.setItem('babydetails', JSON.stringify(babiesdetails));
+    babydetailsList1.setItem('babydetails1', JSON.stringify(babiesdetails1));
+}
+
+
+function normal(){
+    var normtemp = document.getElementById("NormalTemp").checked;
+    var breastfeed = document.getElementById("Breastfeeding").checked;
+    var advicebrstfeed = document.getElementById("AdviceOnBreastFeeding").checked;
+    var immunize = document.getElementById("Immunize").checked;
+    var discharge = document.getElementById("BabyForDischarge").checked;
+    var homecare = document.getElementById("HomeCare").checked;
+    var currentbabyno =parseInt(window.localStorage.getItem('cookie'));
+    var babydata = JSON.parse(window.localStorage.getItem('babieslist'));
+    var babyno = babydata[currentbabyno].child_no;
+
+
+    if(window.localStorage.getItem('normaldetails') === null){
+        var normaldetails = [];
+        var normaldetailsList = window.localStorage;
+    } else {
+        var normaldetailsList = window.localStorage;
+        var normaldetails = JSON.parse(window.localStorage.getItem('normaldetails'));
+    }
+
+    normaldetails.push({
+        child_no:babyno,
+        norm_temp: normtemp,
+        breast_feed: breastfeed,
+        advice_breastfeed: advicebrstfeed,
+        immune: immunize,
+        discharge: discharge,
+        homecare: homecare
+    });
+    normaldetailsList.setItem('normaldetails', JSON.stringify(normaldetails));
+}
+
+function abnormal(){
+    var thermalcare = document.getElementById("ThermalCare").checked;
+    var normal = document.getElementById("NormalTemperature").checked;
+    // var normtemp = document.getElementById("NormalTemp").checked;
+    // var breastfeed = document.getElementById("Breastfeeding").checked;
+    // var advicebrstfeed = document.getElementById("AdviceOnBreastFeeding").checked;
+    // var immunize = document.getElementById("Immunize").checked;
+    // var discharge = document.getElementById("BabyForDischarge").checked;
+    // var homecare = document.getElementById("HomeCare").checked;
+    var continuedthermalsupport = document.getElementById("ContinuedThermalSupport").checked;
+    var continuedsupport = document.getElementById("ContinuedSupport").checked;
+    var currentbabyno =parseInt(window.localStorage.getItem('cookie'));
+    var babydata = JSON.parse(window.localStorage.getItem('babieslist'));
+    var babyno = babydata[currentbabyno].child_no;
+
+
+    if(window.localStorage.getItem('abnormaldetails') === null){
+        var abnormaldetails = [];
+        var abnormaldetailsList = window.localStorage;
+    } else {
+        var abnormaldetailsList = window.localStorage;
+        var abnormaldetails = JSON.parse(window.localStorage.getItem('abnormaldetails'));
+    }
+
+    abnormaldetails.push({
+        child_no:babyno,
+        thermalcare: thermalcare,
+        normal: normal,
+        // norm_temp: normtemp,
+        // breast_feed: breastfeed,
+        // advice_breastfeed: advicebrstfeed,
+        // immune: immunize,
+        // discharge: discharge,
+        // homecare: homecare,
+        continuedthermalsupport: continuedthermalsupport,
+        continuedsupport: continuedsupport
+    });
+    abnormaldetailsList.setItem('abnormaldetails', JSON.stringify(abnormaldetails));
+}
+
+
+function underwt(){
+    var skintoskin = document.getElementById("ThermalCare").checked;
+    var continuedsupport = document.getElementById("ContinuedSupport").checked;
+    var currentbabyno =parseInt(window.localStorage.getItem('cookie'));
+    var babydata = JSON.parse(window.localStorage.getItem('babieslist'));
+    var babyno = babydata[currentbabyno].child_no;
+
+
+    if(window.localStorage.getItem('underwtdetails') === null){
+        var underwtdetails = [];
+        var underwtdetailsList = window.localStorage;
+    } else {
+        var underwtdetailsList = window.localStorage;
+        var underwtdetails = JSON.parse(window.localStorage.getItem('underwtdetails'));
+    }
+
+    underwtdetails.push({
+        child_no:babyno,
+        skin_skin: skintoskin,
+        continuedsupport: continuedsupport
+    });
+    underwtdetailsList.setItem('underwtdetails', JSON.stringify(underwtdetails));
+}
+
+
+function poorfeeding(){
+    var breastmilk = document.getElementById("BreastMilk").checked;
+    var feeding = document.getElementById("AlternateFeedingMethod").checked;
+    var continuedsupport = document.getElementById("ContinuedSupport").checked;
+    var currentbabyno =parseInt(window.localStorage.getItem('cookie'));
+    var babydata = JSON.parse(window.localStorage.getItem('babieslist'));
+    var babyno = babydata[currentbabyno].child_no;
+
+
+    if(window.localStorage.getItem('poorfeedingdetails') === null){
+        var poorfeedingdetails = [];
+        var poorfeedingdetailsList = window.localStorage;
+    } else {
+        var poorfeedingdetailsList = window.localStorage;
+        var poorfeedingdetails = JSON.parse(window.localStorage.getItem('poorfeedingdetails'));
+    }
+
+    poorfeedingdetails.push({
+        child_no:babyno,
+        breastmilk: breastmilk,
+        feeding: feeding,
+        continuedsupport: continuedsupport
+    });
+    poorfeedingdetailsList.setItem('poorfeedingdetails', JSON.stringify(poorfeedingdetails));
+}
+
+
+function dangersign(){
+    var antibiotics = document.getElementById("Antibiotics").checked;
+    var currentbabyno =parseInt(window.localStorage.getItem('cookie'));
+    var babydata = JSON.parse(window.localStorage.getItem('babieslist'));
+    var babyno = babydata[currentbabyno].child_no;
+
+
+    if(window.localStorage.getItem('dangersigndetails') === null){
+        var dangersigndetails = [];
+        var dangersigndetailsList = window.localStorage;
+    } else {
+        var dangersigndetailsList = window.localStorage;
+        var dangersigndetails = JSON.parse(window.localStorage.getItem('dangersigndetails'));
+    }
+
+    dangersigndetails.push({
+        child_no:babyno,
+        antibiotics: antibiotics
+    });
+    dangersigndetailsList.setItem('dangersigndetails', JSON.stringify(dangersigndetails));
+}
+
+
+function babyTimer() {
+// Baby birth datetime
+//     var testbirthdate = list[i].birthDateTime.getTime();
+//     console.log(testbirthdate)
+    var birthDate = new Date().getTime();
+
+// Update the count down every 1 second
+    var x = setInterval(function() {
+
+        // Get todays date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now an the birth date
+        var distance = now - birthDate;
+
+        // Time calculations for days, hours, minutes and seconds
+        // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+
+        // <div class="item-title" id="babytime"> hours + "h " + minutes + "m " + seconds + "s " + "Minutes after birth"</div>
+        var time = hours + "h " + minutes + "m " + seconds + "s " + "Minutes after birth";
+
+        // If the count down is over, write some text
+        if ( hours > 23) {
+            clearInterval(x);
+            document.querySelector('time').innerHTML = "EXPIRED";
+        }
+    }, 1000);
+
+    var y =  setTimeout(myTimeout1, 3600000)
+
+    function myTimeout1() {
+        alert("End of 1st phase");
+    }
+
+    var z =  setTimeout(myTimeout2, 5400000)
+    function myTimeout2() {
+        alert("End of 2nd phase");
+    }
+
+    var s =  setTimeout(myTimeout3, 86400000)
+    function myTimeout3() {
+        alert("End of 24hours");
+    }
+    location.href="BPhase1.html";
+}
+
+//babyTimer as object
+
+var babyTimer = {
+// Baby birth datetime
+//     var testbirthdate = list[i].birthDateTime.getTime();
+//     console.log(testbirthdate)
+    birthDate: new Date().getTime();
+
+// Update the count down every 1 second
+    x:  setInterval(function() {
+
+        // Get todays date and time
+        now: new Date().getTime();
+
+        // Find the distance between now an the birth date
+        distance: now - this.birthDate;
+
+        // Time calculations for days, hours, minutes and seconds
+        // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        seconds: Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+
+        // <div class="item-title" id="babytime"> hours + "h " + minutes + "m " + seconds + "s " + "Minutes after birth"</div>
+        time: this.hours + "h " + this.minutes + "m " + this.seconds + "s " + "Minutes after birth";
+
+        // If the count down is over, write some text
+        if ( this.hours > 23) {
+            clearInterval(x);
+            document.querySelector('time').innerHTML = "EXPIRED";
+        }
+    }, 1000);
+
+    y:  setTimeout(myTimeout1, 3600000)
+    function myTimeout1() {
+        alert("End of 1st phase");
+    }
+
+    z:  setTimeout(myTimeout2, 5400000)
+    function myTimeout2() {
+        alert("End of 2nd phase");
+    }
+
+    s:  setTimeout(myTimeout3, 86400000)
+    function myTimeout3() {
+        alert("End of 24hours");
+    }
+
+    timerpush: function() {
+        currentbabyno: parseInt(window.localStorage.getItem('cookie'));
+        babydata: JSON.parse(window.localStorage.getItem('babieslist'));
+        babyno: babydata[currentbabyno].child_no;
+
+        if(window.localStorage.getItem('babytimedetails') === null){
+            var babytimedetails = [];
+            var babytimedetailsList = window.localStorage;
+        } else {
+            var babytimedetailsList = window.localStorage;
+            var babytimedetails = JSON.parse(window.localStorage.getItem('dangersigndetails'));
+        }
+
+        babytimedetails.push({
+            child_no:babyno,
+            timer: x.time
+        });
+        babytimedetailsList.setItem('babytimedetails', JSON.stringify(babytimedetails));
+    }
+    location.href="BPhase1.html";
 }

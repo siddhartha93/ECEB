@@ -47,7 +47,7 @@
                                             <div class="item-inner">
                                                 <div class="item-title label">Child No.</div>
                                                 <div class="item-input">
-                                                    <input type="text" placeholder="Child Number" id="childNo">
+                                                    <input type="text" placeholder="Child Number" id="childNo" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -57,7 +57,7 @@
                                             <div class="item-inner">
                                                 <div class="item-title label">Bed No.</div>
                                                 <div class="item-input">
-                                                    <input type="email" placeholder="Bed Number" id="bedNo">
+                                                    <input type="email" placeholder="Bed Number" id="bedNo" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -69,7 +69,7 @@
                                             <div class="item-inner">
                                                 <div class="item-title label">Gender</div>
                                                 <div class="item-input">
-                                                    <select id="Gender">
+                                                    <select id="Gender" required>
                                                         <option value="0">Male</option>
                                                         <option value="1">Female</option>
                                                     </select>
@@ -84,7 +84,7 @@
                                             <div class="item-inner">
                                                 <div class="item-title label">Mother Name</div>
                                                 <div class="item-input">
-                                                    <input type="text" placeholder="Mother Name" id="motherName">
+                                                    <input type="text" placeholder="Mother Name" id="motherName" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -96,14 +96,14 @@
                                             <div class="item-inner">
                                                 <div class="item-title label">Birth Date time</div>
                                                 <div class="item-input">
-                                                    <input type="datetime-local" placeholder="Birth day time" id="birthDateTime" value="">
+                                                    <input type="datetime-local" placeholder="Birth day time" id="birthDateTime" value="" required>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
                                 <div>
-                                    <a class="button button-fill" id="Createbaby-Button" onClick="addBaby()" href="BabiesList.html">Add Baby</a>
+                                    <a class="button button-fill" id="Createbaby-Button" onClick="addBaby()">Add Baby</a>
                                 </div>
                             </div>
                         </form>

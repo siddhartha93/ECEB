@@ -11,6 +11,10 @@
             {
               "xml": "<feature name=\"Device\"><param name=\"browser-package\" value=\"Device\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"BackgroundMode\"><param name=\"browser-package\" value=\"BackgroundMode\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -31,6 +35,9 @@
       "PACKAGE_NAME": "com.example.hello"
     },
     "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.example.hello"
+    },
+    "cordova-plugin-background-mode": {
       "PACKAGE_NAME": "com.example.hello"
     }
   },
@@ -72,6 +79,21 @@
       "id": "cordova-plugin-splashscreen.SplashScreenProxy",
       "pluginId": "cordova-plugin-splashscreen",
       "runs": true
+    },
+    {
+      "file": "plugins/cordova-plugin-background-mode/www/background-mode.js",
+      "id": "cordova-plugin-background-mode.BackgroundMode",
+      "pluginId": "cordova-plugin-background-mode",
+      "clobbers": [
+        "cordova.plugins.backgroundMode",
+        "plugin.backgroundMode"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-background-mode/src/browser/BackgroundModeProxy.js",
+      "id": "cordova-plugin-background-mode.BackgroundMode.Proxy",
+      "pluginId": "cordova-plugin-background-mode",
+      "runs": true
     }
   ],
   "plugin_metadata": {
@@ -79,6 +101,7 @@
     "ionic-plugin-keyboard": "2.2.1",
     "cordova-plugin-device": "1.1.7",
     "cordova-plugin-splashscreen": "4.1.0",
-    "cordova-plugin-ionic-webview": "1.1.19"
+    "cordova-plugin-ionic-webview": "1.1.19",
+    "cordova-plugin-background-mode": "0.7.2"
   }
 }

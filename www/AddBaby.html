@@ -16,6 +16,17 @@
         <link rel="stylesheet" href="css/framework7.material.colors.min.css">
         <!-- Path to your custom app styles-->
         <link rel="stylesheet" href="css/my-app.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        <script type="text/javascript">
+                $("#birthDateTime").datetimepicker({
+                    format: "dd MM yyyy - hh:ii",
+                    autoclose: true,
+                    todayBtn: true,
+                    pickerPosition: "bottom-left",
+                    minuteStep: 10
+                });
+        </script>
     </head>
     <body>
     <div class="views">
@@ -96,14 +107,19 @@
                                             <div class="item-inner">
                                                 <div class="item-title label">Birth Date time</div>
                                                 <div class="item-input">
-                                                    <input type="datetime-local" placeholder="Birth day time" id="birthDateTime" value="" required>
+                                                    <input type="text" placeholder="Birth day time" id="birthDateTime" value="" required>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
+                                    <!--<li>-->
+                                        <!--<div id="datetimepicker1" class="date">-->
+                                            <!--<input data-format="yyyy-MM-dd hh:mm:ss" type="text"> </input>-->
+                                        <!--</div>-->
+                                    <!--</li>-->
                                 </ul>
                                 <div>
-                                    <a class="button button-fill" id="Createbaby-Button" onClick="addBaby()" href="BabiesList.html">Add Baby</a>
+                                    <a class="button button-fill" id="Createbaby-Button" onClick="addBaby();babyTimer();">Add Baby</a>
                                 </div>
                             </div>
                         </form>
@@ -118,6 +134,5 @@
     <script type="text/javascript" src="js/my-app.js"></script>
 <!--    <script type="text/javascript" src="cordova.js"></script>-->
     <script type="text/javascript" src="js/index.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     </body>
 </html>

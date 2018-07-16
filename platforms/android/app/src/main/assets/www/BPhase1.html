@@ -18,7 +18,6 @@
 	$(document).ready(function(){
 		var list = JSON.parse(window.localStorage.getItem("babieslist"));
 		var item = window.localStorage.getItem("cookie");
-		alert(list);
 		$("#name").append('Baby of '+list[item].mother_name);
 	});
 	</script>
@@ -55,7 +54,8 @@
                                     <div class="item-inner">
                                         <div class="item-title-row">
                                             <div class="item-title" id="name"> </div>
-                                            <div class="item-after" id="write">13:30 (Minutes after birth)</div>
+                                            <!--<div class="item-after" id="write"> </div>-->
+                                            <div class="item-after" id="write"> <span id="time"></span></div>
                                         </div>
                                     </div>
                                 </a>

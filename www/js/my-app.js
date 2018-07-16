@@ -232,8 +232,7 @@ function addBaby(){
 	var gender = document.getElementById("Gender").value;
 	var mothername = document.getElementById("motherName").value;
 	var birthdate = document.getElementById("birthDateTime").value;
-
-
+	console.log(document.getElementById("birthDateTime").getTime());
 
 if(window.localStorage.getItem('babieslist') === null){
 	alert("null");
@@ -251,7 +250,10 @@ if(window.localStorage.getItem('babieslist') === null){
 		birthDateTime: birthdate
 	});
 	babyList.setItem('babieslist', JSON.stringify(babies));
+	location.href="BabiesList.html";
+    babyTimer();
 }
+
 
 function babyDetails(){
     var skintoskin = document.getElementById("skinToSkin").checked;
@@ -419,7 +421,6 @@ function poorfeeding(){
     var babydata = JSON.parse(window.localStorage.getItem('babieslist'));
     var babyno = babydata[currentbabyno].child_no;
 
-
     if(window.localStorage.getItem('poorfeedingdetails') === null){
         var poorfeedingdetails = [];
         var poorfeedingdetailsList = window.localStorage;
@@ -443,7 +444,6 @@ function dangersign(){
     var currentbabyno =parseInt(window.localStorage.getItem('cookie'));
     var babydata = JSON.parse(window.localStorage.getItem('babieslist'));
     var babyno = babydata[currentbabyno].child_no;
-
 
     if(window.localStorage.getItem('dangersigndetails') === null){
         var dangersigndetails = [];
@@ -484,13 +484,33 @@ function babyTimer() {
 
         // Output the result in an element with id="demo"
 
-        document.getElementById("time").innerHTML = hours + "h " + minutes + "m " + seconds + "s " + "Minutes after birth";
+        // <div class="item-title" id="babytime"> hours + "h " + minutes + "m " + seconds + "s " + "Minutes after birth"</div>
+        var Time1 = hours + "h " + minutes + "m " + seconds + "s " + "Minutes after birth";
 
         // If the count down is over, write some text
+        var currentbabyno =parseInt(window.localStorage.getItem('cookie'));
+        var babydata = JSON.parse(window.localStorage.getItem('babieslist'));
+        var babyno = babydata[currentbabyno].child_no;
+
         if ( hours > 23) {
             clearInterval(x);
             document.querySelector('time').innerHTML = "EXPIRED";
         }
+
+        else if(window.localStorage.getItem('timerlist') === null){
+            alert("null");
+            var times = [];
+            var timerList = window.localStorage;
+        }
+        else {
+            var timerList = window.localStorage;
+            var times = JSON.parse(window.localStorage.getItem('babieslist'));
+        }
+        times.push({
+            child_no: babyno,
+            time: Time1
+        });
+        timerList.setItem('timerlist', JSON.stringify(times));
     }, 1000);
 
     var y =  setTimeout(myTimeout1, 3600000)
@@ -509,3 +529,75 @@ function babyTimer() {
         alert("End of 24hours");
     }
 }
+
+// //babyTimer as object
+//
+// var babyTimer = {
+// // Baby birth datetime
+// //     var testbirthdate = list[i].birthDateTime.getTime();
+// //     console.log(testbirthdate)
+//     birthDate: new Date().getTime();
+//
+// // Update the count down every 1 second
+//     x:  setInterval(function() {
+//
+//         // Get todays date and time
+//         now: new Date().getTime();
+//
+//         // Find the distance between now an the birth date
+//         distance: now - this.birthDate;
+//
+//         // Time calculations for days, hours, minutes and seconds
+//         // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//         hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//         minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//         seconds: Math.floor((distance % (1000 * 60)) / 1000);
+//
+//         // Output the result in an element with id="demo"
+//
+//         // <div class="item-title" id="babytime"> hours + "h " + minutes + "m " + seconds + "s " + "Minutes after birth"</div>
+//         time: this.hours + "h " + this.minutes + "m " + this.seconds + "s " + "Minutes after birth";
+//
+//         // If the count down is over, write some text
+//         if ( this.hours > 23) {
+//             clearInterval(x);
+//             document.querySelector('time').innerHTML = "EXPIRED";
+//         }
+//     }, 1000);
+//
+//     y:  setTimeout(myTimeout1, 3600000)
+//     function myTimeout1() {
+//         alert("End of 1st phase");
+//     }
+//
+//     z:  setTimeout(myTimeout2, 5400000)
+//     function myTimeout2() {
+//         alert("End of 2nd phase");
+//     }
+//
+//     s:  setTimeout(myTimeout3, 86400000)
+//     function myTimeout3() {
+//         alert("End of 24hours");
+//     }
+//
+//     timerpush: function() {
+//         currentbabyno: parseInt(window.localStorage.getItem('cookie'));
+//         babydata: JSON.parse(window.localStorage.getItem('babieslist'));
+//         babyno: babydata[currentbabyno].child_no;
+//
+//         if(window.localStorage.getItem('babytimedetails') === null){
+//             var babytimedetails = [];
+//             var babytimedetailsList = window.localStorage;
+//         } else {
+//             var babytimedetailsList = window.localStorage;
+//             var babytimedetails = JSON.parse(window.localStorage.getItem('dangersigndetails'));
+//         }
+//
+//         babytimedetails.push({
+//             child_no:babyno,
+//             timer: x.time
+//         });
+//         babytimedetailsList.setItem('babytimedetails', JSON.stringify(babytimedetails));
+//     }
+//     location.href="BPhase1.html";
+// }
